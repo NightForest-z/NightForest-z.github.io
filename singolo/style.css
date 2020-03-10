@@ -52,7 +52,7 @@ body {
   text-transform: uppercase;
   }
 
-.logo_singolo {
+.logo_simple {
   display: inline-block;
   color: white;
 }
@@ -63,7 +63,7 @@ body {
 .logo_simple:hover {
   cursor: pointer;
 }
-.header__navi {
+.header__navigation {
   background-color:#2d303a;
   display: flex;
   font-size: 1.2rem;
@@ -72,7 +72,7 @@ body {
   text-transform: uppercase;
 }
 
-.head__li {
+.header__li {
   display: block;
   float: right;
   margin-right: 21px;
@@ -80,7 +80,7 @@ body {
   margin-left: 8px;
   position: relative;
 }
-.head__li::after {
+.header__li::after {
   content: "";
   background-color: #5c5757;
   width: 3px;
@@ -90,7 +90,7 @@ body {
   top: 51%;
   right: -18px;
 }
-.head__li:first-child::after {
+.header__li:first-child::after {
  width: 0;
 }
 
@@ -110,12 +110,10 @@ body {
 
 
 
-
-
-.wrapper_slide{
+.wrapper_slider{
   height: 600px;
   background-color: #f06c64;
-  border-bottom: solid 5px #ea676b;
+  border-bottom: solid 6px #ea676b;
   display: flex;
 }
 .vertical {
@@ -165,7 +163,7 @@ body {
 }
 .left_pointer {
   position: relative;
-  transition-property: width;
+  transition-property: border;
   transition-duration: 0.01s;
   transition-timing-function: linear;
    height: 28px;
@@ -173,14 +171,10 @@ body {
    top: 279px;
   z-index: 9;
 }
-.left_pointer:hover {
-  cursor: pointer;
-  width: 20px;
-  outline-style: double;
-}
+
 .right_pointer {
   position: relative;
-  transition-property: width;
+  transition-property: border;
   transition-duration: 0.01s;
   transition-timing-function: linear;
    height: 28px;
@@ -188,16 +182,18 @@ body {
    top: 253px;
   z-index: 9;
 }
-.right_pointer:hover {
-  cursor: pointer;
-  width: 20px;
-  outline-style: double;
-}
 
+
+.point:hover {
+  cursor: grab;
+  width: 30px;
+  height: 40px;
+}
 .wrapper_services {
-  padding: 59px 39px 31px;
+  padding: 59px 39px 0px;
+  height: 499px;
   background-color: #f2f2f2;
-  border-bottom: 5px solid #fff
+  border-bottom: 6px solid #fff
 }
 .services_head {
     margin-bottom: 16px;
@@ -213,17 +209,18 @@ margin-bottom: 43px;
 font-size: 1.8rem;
 font-weight: 300;
 color: #767e9e;
-line-height: 30px;
+line-height: 31px;
 text-align: justify;
-letter-spacing: -.35px;
+letter-spacing: -.092px;
+font-family: "Lato";
 }
 .services__three-column-layout {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr;
-grid-row-gap: 22px;
+grid-row-gap: 20px;
 grid-column-gap: 20px;
-justify-content: start;
+
 grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
                      ".services_part4 .services_part5 .services_part6";
 }
@@ -245,6 +242,7 @@ grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
   margin-bottom: 7px;
 }
 .p_chapter {
+  overflow: hidden;
   color: #767e9e;
   font-size: 1.2rem;
   line-height: 21px;
@@ -252,6 +250,7 @@ grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
 }
 
 .services_text {
+
   margin-top: 1px;
   position: relative;
   justify-self: end;
@@ -303,7 +302,7 @@ grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
 }
 
 .portfolio__li {
-  margin: 13px 10px 13px 0;
+  margin: 10px 9px 12px 0;
   display: inline-block;
 }
 
@@ -313,12 +312,13 @@ grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
   padding: 2px 6px 3px 6px;
   text-decoration: none;
   color: #767e9e;
-  letter-spacing: -0.02px;
+  letter-spacing: 0.01px;
   font-weight: 400;
   font-size: 1.2rem;
   transition-property: border, color;
   transition-duration: 0.01s;
   transition-timing-function: linear;
+  text-align: justify;
 }
 
 
@@ -348,13 +348,13 @@ grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
 
 
 .wrapper_about {
-  height: 728px;
+  height: 733px;
   background-color: #f2f2f2;
   border-bottom: solid 6px #ffffff;;
 }
 .portfolio__three-column-layout {
   margin-left: 20px;
-  padding: 43px 21px;
+  padding: 49px 21px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -369,39 +369,41 @@ grid-template-areas: ".services_part1 .services_part2 .services_part3 <br>"
   font-weight: 900;
   text-align: left;
   letter-spacing: -0.03rem;
-  padding: 70px 0 20px 40px;
+  padding: 68px 0 20px 40px;
 }
 
 .name {
-padding-top: 8px;
+overflow: visible;
+padding-top: 15px;
 font-size: 1.8rem;
 line-height: 18px;
 color: #666d89;
 font-family: "Lato";
 font-weight: 900;
 text-align: left;
-letter-spacing: -0.15;
+letter-spacing: 0.001;
 }
 .p_about {
+  display: inline-block;
   padding: 8px 40px 30px 40px;
   font-size: 1.8rem;
   color: #767e9e;
   letter-spacing: -0.08px;
   height: 57px;
   line-height: 30px;
-  text-align: left;
+  text-align: justify;
   font-weight: 300;
  }
 .text_about {
-width: 309px;
-letter-spacing: -0.1;
-padding: 10px 0 5px 0;
+width: 300px;
+letter-spacing: -0.01;
+padding: 9px 0 23px 0;
 font-size: 1.2rem;
 line-height: 22px;
 color: #767e9e;
 font-family: "Lato";
 font-weight: 400;
-text-align: left;
+text-align: justify;
 }
 .about__links {
   display: inline-flex;
@@ -415,12 +417,18 @@ text-align: left;
    transition-duration: 0.01s;
    transition-timing-function: linear;
  }
-
- .person-contact:hover, .person-contact:focus {
-
+ .link__face {
+  transition-property: border, color;
+  transition-duration: 0.01s;
+  transition-timing-function: linear;
+ }
+ .link__face:hover, .link__face:focus {
+   background-color: rgba(194, 180, 160, 30%);
    border-style: groove;
    border: 1px  solid #1f2951;
    padding: 1px;
+   border-radius: 50%;
+
  }
  /* FORM */
 
@@ -437,7 +445,7 @@ text-align: left;
  .quote__heading {
   line-height: 18px;
   margin-left: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   font-size: 3rem;
   color: #f0d8d9;
 }
@@ -611,4 +619,13 @@ padding-right: 11px;
 
 .links__fb, .links__google, .links__twitter, .links__linked {
   padding-left: 8px;
+}
+
+.links__fb:hover, .links__google:hover, .links__twitter:hover, .links__linked:hover  {
+  background-color: cornflowerblue;
+  border: cyan 1px solid;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding-left: 0px;
 }
